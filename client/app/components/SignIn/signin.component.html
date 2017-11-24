@@ -1,0 +1,21 @@
+<div>
+    <form class="form-horizontal" (ngSubmit)="onSignIn(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="emailId" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="emailId" placeholder="Email ID" [(ngModel)]="userDetails.email" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="passwordId" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" id="passwordId" placeholder="Password" [(ngModel)]="userDetails.password" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="SignIn">
+            </div>
+        </div>
+    </form>
+</div>
