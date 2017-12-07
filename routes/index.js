@@ -1,3 +1,6 @@
+/**
+ * Initial route to start
+ */
 (function (index) {
 
     index.init = function (app) {

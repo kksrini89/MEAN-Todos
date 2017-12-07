@@ -26,6 +26,10 @@ export class SignInComponent {
 
     }
 
+    /**
+     * To sign and redirect to todo page
+     * @param form 
+     */
     onSignIn(form: NgForm) {
         // this.todoService.signIn(this.userDetails);
         if (form.valid) {

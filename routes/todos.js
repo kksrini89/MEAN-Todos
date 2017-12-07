@@ -32,7 +32,9 @@
             });
         });
 
-        //SAVE todo
+        /**
+         * To save todo
+         */
         app.post(`${url}/todo`, (req, res, next) => {
             var todo = req.body;
             if (!todo.text || !(todo.isCompleted + '')) {
@@ -48,7 +50,9 @@
             }
         });
 
-        //Update todo
+        /**
+         * To Update todo
+         */
         app.put(`${url}/todos/:id`, (req, res, next) => {
             var todo = req.body;
             var updatedObj = {};
@@ -73,7 +77,9 @@
             }
         });
 
-        //Delete todo
+        /**
+         * To delete todo
+         */
         app.delete(`${url}/todo/:id`, (req, res, next) => {
             db.todos.remove({
                 _id: mongojs.ObjectId(req.params.id)

@@ -8,25 +8,18 @@ export class AuthService {
 
     constructor(private router: Router) { }
 
-    signIn(credentials) {
-        // firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
+    signIn(credentials) {       
     }
 
     getAuthenticated() {
         return this.auth;
     }
 
-    setAuthenticated(value) {
-        // if (!firebase.auth().currentUser)
-        //     return false;
+    setAuthenticated(value) {        
         this.auth = value;
     }
 
-    logout() {
-        // firebase.auth().signOut();
+    logout() {        
         this.router.navigate(['/signin']);
     }
 }

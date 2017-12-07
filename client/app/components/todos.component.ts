@@ -26,6 +26,11 @@ export class TodosComponent implements OnInit {
     });
   }
 
+  /**
+   * To add todo
+   * @param event 
+   * @param todotext 
+   */
   addTodo(event, todotext) {
     let newTodo = {
       text: todotext.value,
@@ -39,6 +44,11 @@ export class TodosComponent implements OnInit {
       });
   }
 
+  /**
+   * To set the edit state
+   * @param todo 
+   * @param state 
+   */
   setEditState(todo, state) {
     if (state) {
       todo.isEditMode = state;
@@ -47,6 +57,10 @@ export class TodosComponent implements OnInit {
     }
   }
 
+  /**
+   * To update status
+   * @param todo 
+   */
   updateStatus(todo) {
     let _todo = {
       _id: todo._id,
@@ -59,6 +73,11 @@ export class TodosComponent implements OnInit {
       });
   }
 
+  /**
+   * To update the todo text
+   * @param event 
+   * @param todo 
+   */
   updateTodoText(event, todo) {
     if (event.which === 13) {
       todo.text = event.target.value;
