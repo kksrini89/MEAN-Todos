@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var TodoService = (function () {
+var TodoService = /** @class */ (function () {
     function TodoService(_http) {
         this._http = _http;
     }

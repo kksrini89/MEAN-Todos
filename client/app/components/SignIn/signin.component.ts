@@ -10,6 +10,10 @@ import { TodoService } from "../../services/todos.service";
     selector: 'signin',
     templateUrl: 'signin.component.html',
     styles: [`   
+      .signInForm{
+          margin:15%;
+          text-align:center;
+      }
     `
     ]
 })

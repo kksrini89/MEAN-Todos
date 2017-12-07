@@ -10,28 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var auth_service_1 = require("./services/auth.service");
-var AppComponent = /** @class */ (function () {
-    function AppComponent(authService) {
+var auth_service_1 = require("./auth.service");
+var AuthGuard = /** @class */ (function () {
+    function AuthGuard(authService) {
         this.authService = authService;
-        this.isAuthenticated = false;
     }
-    AppComponent.prototype.isAuth = function () {
+    AuthGuard.prototype.canActivate = function (route, state) {
         return this.authService.getAuthenticated();
     };
-    AppComponent.prototype.onLogOut = function () {
-        this.authService.setAuthenticated(false);
-        this.authService.logout();
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: 'app.component.html'
-        }),
+    AuthGuard = __decorate([
+        core_1.Injectable(),
         __metadata("design:paramtypes", [auth_service_1.AuthService])
-    ], AppComponent);
-    return AppComponent;
+    ], AuthGuard);
+    return AuthGuard;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AuthGuard = AuthGuard;
+//# sourceMappingURL=auth.guard.js.map

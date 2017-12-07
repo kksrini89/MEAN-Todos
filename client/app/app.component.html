@@ -12,8 +12,8 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="!isAuthenticated"><a [routerLink]="['']">SignIn</a></li>
-        <li *ngIf="isAuthenticated"><a (click)="onLogOut()">SignOut</a></li>
+        <li *ngIf="!isAuth()"><a [routerLink]="['']">SignIn</a></li>
+        <li *ngIf="isAuth()"><a (click)="onLogOut()">SignOut</a></li>
       </ul>
     </div>
   </div>

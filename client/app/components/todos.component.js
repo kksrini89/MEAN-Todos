@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var todos_service_1 = require("./../services/todos.service");
-var TodosComponent = (function () {
+var TodosComponent = /** @class */ (function () {
     function TodosComponent(todoService) {
         this.todoService = todoService;
         this.todos = [];
@@ -30,6 +30,7 @@ var TodosComponent = (function () {
         };
         this.todoService.saveTodos(newTodo)
             .subscribe(function (res) {
+            console.log(res);
             _this.todos.push(newTodo);
             todotext.value = '';
         });
