@@ -1,5 +1,8 @@
 # MEAN-Todos
 
+This application is about **CRUD operations for TODO items** and it is involved with **Login and LogOut handling** also. 
+Please find the below steps to get started on the application walkthrough.
+
 ## Initial Steps
 
 To execute the application, follow the below steps by navigating to project directory (root folder) from terminal
